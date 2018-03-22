@@ -60,14 +60,8 @@ class Employee {
   Call your new class Manager
 */
 
-class Manager {
-  constructor(first_name, last_name, email, age, reports) {
-    this.first_name = first_name;
-    this.last_name = last_name;
-    this.email = email;
-    this.age = age;
-    this.reports = [];
-  }
+class Manager extends Employee {
+  constructor(first_name, last_name, email, age, reports)
   makeWidget() {
     return this.first_name + " " + this.last_name + " Widget";
   }

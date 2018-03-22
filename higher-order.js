@@ -119,7 +119,15 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal = purchases.filter((item)=>item.owner === "Bob").reduce((prev, curr) => (prev + curr.price),0);
+let bobsTotal = purchases.reduce((acc, person) => {
+  if (person.owner === 'Bob') {
+    return acc + person.price;
+  }
+  else {
+    return acc;
+  }
+}, 0) 
+//let bobsTotal = purchases.filter((item)=>item.owner === "Bob").reduce((prev, curr) => (prev + curr.price),0);
 
 bobsTotal;
 
